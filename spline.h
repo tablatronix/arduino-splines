@@ -6,7 +6,11 @@
 #ifndef spline_h
 #define spline_h
 
-#include "WProgram.h"
+#if defined(ARDUINO) && ARDUINO >= 100
+  #include "Arduino.h"
+#else
+  #include "WProgram.h"
+#endif
 
 #define Hermite 10
 #define Catmull 11
